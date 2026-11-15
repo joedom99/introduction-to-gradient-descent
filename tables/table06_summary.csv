@@ -1,0 +1,15 @@
+Result,Value
+Terrain: lowest point vs. depression floor,0 m vs. 21 m
+Terrain: steps from start A to the lowest point,86 at learning rate 0.03
+Terrain: share of starting points that end in the depression,27%
+"Terrain: from start B, plain / momentum / Adam end in",the depression / the lowest point / the depression
+"Line: revenue per extra ad dollar, gradient descent vs. formula",$2.3771 vs. $2.3771
+Scaling: steps in raw dollars / hundreds / standardized,"10,000 (not converged) / 713 / 22"
+"SGD: steps taken in 50 epochs, batch / mini-batch / single-row","50 / 1,600 / 50,000"
+"SGD: typical miss after 50 epochs, batch / mini-batch / single-row",$172 / $125.77 / $128.81
+Typical miss: straight line / neural network / noise in the data,$125.76 / $60.86 / $60.00
+Budget: truly best daily ad spend and profit,$257 earning $313.12 a day
+Budget: straight line recommends,"$500, leaving $109.75 a day behind"
+Budget: network after 1 epoch recommends,"$391, leaving $39.56 a day behind"
+"Budget: network after 1,000 epochs recommends","$263, leaving $0.10 a day behind"
+Budget: range across 10 random starts,$249 to $263 a day

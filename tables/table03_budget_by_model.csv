@@ -1,0 +1,7 @@
+Model,Recommended daily ad spend,Daily profit at that spend,Profit left behind per day,Per year
+The true curve (never known in practice),$257,$313.12,$0.00,$0
+Straight line,$500,$203.37,$109.75,"$40,059"
+Neural network after 1 epoch,$391,$273.56,$39.56,"$14,440"
+Neural network after 10 epochs,$289,$310.42,$2.70,$986
+Neural network after 100 epochs,$242,$312.49,$0.63,$231
+"Neural network after 1,000 epochs",$263,$313.02,$0.10,$38

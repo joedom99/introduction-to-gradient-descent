@@ -1,0 +1,4 @@
+Ad spend measured in,Learning rate,Steps,Converged,Revenue per extra ad dollar,Intercept,Typical miss (RMSE)
+Raw dollars,0.00001,"10,000","No, hit the step limit",$3.54,$18,$224
+Hundreds of dollars,0.05,713,Yes,$2.38,$406,$126
+Standardized,0.3,22,Yes,$2.38,$406,$126

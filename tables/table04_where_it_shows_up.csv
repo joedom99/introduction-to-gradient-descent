@@ -1,0 +1,8 @@
+Tool,What's inside,How it's trained
+Ad platform bidding,Models that predict clicks and conversions for each ad auction,"Neural networks trained with stochastic gradient descent, updated as new data arrives"
+Product and content recommendations,Models that predict what each customer will want next,"Neural networks and matrix factorization, both trained with gradient descent"
+Lookalike and propensity audiences,Models that score how likely a person is to respond,"Logistic regression at scale, gradient boosting, or neural networks"
+Large language models (chat assistants),Models that predict the next word,Mini-batch stochastic gradient descent with Adam-style step rules
+Image and video generators,Models that learn to turn noise into pictures,"The same family of step rules, on very large networks"
+"Search, translation, and speech tools",Models that match meaning across text and audio,Neural networks trained the same way
+Where it usually isn't used,"Ordinary linear regression, decision trees, random forests","A formula gives the answer directly, or the model is built a different way"

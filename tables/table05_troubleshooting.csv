@@ -1,0 +1,10 @@
+What you see,Likely cause,What to try
+"The loss climbs, bounces, or shows ""nan""",The learning rate is too high,Lower it by a factor of ten
+The loss barely moves,"The learning rate is too low, or the walk is on a plateau","Raise the rate, or try momentum or Adam"
+Training stops at the step limit,The model didn't converge,Read the warning. Allow more steps or fix the scaling
+Slow progress in a zigzag,Inputs are on very different scales,Standardize the inputs
+The answer hovers and never settles,A constant learning rate with stochastic gradient descent,Add a learning rate schedule
+A different answer every run,No random seed was set,Fix the seed and record it
+Different quality from different starts,Local minimums,Train from several starts and keep the best
+"Training loss keeps falling, new data gets worse",Overfitting,"Stop earlier, simplify the model, or get more data"
+"Well trained, still wrong","The model is the wrong shape, or the loss measures the wrong thing",Change the model or the loss. More training won't help
