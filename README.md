@@ -14,7 +14,7 @@ Companion notebook for the Marketing Data Science article **"An Introduction to 
 
 ## What This Is
 
-Gradient descent is the algorithm that trains most machine learning models and nearly every neural network, including the ones behind large language models. The idea is simple: start with a guess, find which direction makes the model less wrong, take a small step that way, and repeat.
+Gradient descent is the idea behind how many machine learning models, and nearly all modern neural networks, are trained. That includes the networks behind large language models. The idea is simple: start with a guess, find which direction makes the model less wrong, take a small step that way, and repeat.
 
 This notebook explains it with a picture from the sport of orienteering. Gradient descent is like finding your way downhill at night with no map. You can't see the terrain, but you can feel which way the ground slopes under your feet.
 
@@ -23,7 +23,7 @@ It builds the idea in four stages:
 - **A simulated landscape, drawn as a topographic map.** Slope, the gradient, the step rule, the learning rate, when to stop, and how a walk gets stuck in a local minimum.
 - **A straight line fit to marketing data.** A small online shop's daily ad spend and revenue create a loss surface that reads like a topographic map. Gradient descent lands on the same line the textbook formula gives, and feature scaling decides how long that takes.
 - **Stochastic gradient descent, momentum, and Adam.** The versions used on large data sets and in neural networks.
-- **A small neural network and a budget decision.** A 25-weight network learns the diminishing-returns curve a line can't follow, then recommends a daily ad budget. The notebook shows what an under-trained model costs.
+- **A small neural network and a budget decision.** A 25-parameter network learns the diminishing-returns curve a line can't follow, then recommends a daily ad budget. The notebook shows what the wrong model and an undertrained model each cost.
 
 Everything is written from scratch in NumPy, including backpropagation. An optional last cell repeats the network in PyTorch.
 
@@ -54,7 +54,7 @@ The notebook is organized into sixteen sections:
 12. A small neural network
 13. From a trained model to a budget
 14. Reference tables
-15. Checking the results (33 checks: 13 math checks that should hold under any settings and 20 simulation results)
+15. Checking the results (36 checks: 8 math checks that should hold under any settings and 28 results of the default run)
 16. Summary
 
 ### How to run it
@@ -105,21 +105,21 @@ With the default settings:
 
 **On the terrain**
 
-- **Gradient descent reaches the lowest point in 86 steps** from the first starting point, crossing every contour line at a right angle and never stepping uphill.
-- **The learning rate decides whether it works.** Given the same 60 steps, a rate of 0.002 is still 5.4 km from the lowest point, 0.03 arrives, and 0.28 overshoots and is still 1.7 km away.
+- **Gradient descent reaches the lowest point in 86 steps** from the first starting point. Each step starts at a right angle to the contour line it's standing on, and at this learning rate none goes uphill.
+- **The learning rate decides whether it works.** Given the same 60 steps, a rate of 0.002 is still 5.4 km from the lowest point, 0.03 is within about 1.4 m of it, and 0.28 overshoots and is still 1.7 km away.
 - **Where you start decides where you finish.** A second starting point ends in a depression 21 meters above the lowest point and stops there. About 27% of all starting points on the map do the same.
 - **Momentum escapes the depression. Adam, at the default setting, does not.** No step rule is guaranteed to get out of a local minimum.
 
 **On the marketing data**
 
 - **Gradient descent matches the textbook formula.** Fitting daily revenue to ad spend, it lands on \$2.38 of revenue per extra ad dollar, within a hundredth of a cent of least squares.
-- **Units change everything.** The same fit takes 22 steps with ad spend standardized and 713 with spend in hundreds of dollars. In raw dollars it fails to converge in 10,000 steps and reports \$3.54 per ad dollar.
+- **Units matter.** With a learning rate suited to each set of units, the same fit takes 22 steps with ad spend standardized and 713 with spend in hundreds of dollars. In raw dollars it fails to converge in 10,000 steps and reports \$3.54 per ad dollar.
 - **Stochastic gradient descent makes more progress per pass.** After 50 passes through the data, batch gradient descent (50 steps) has a typical miss of \$172. Mini-batch (1,600 steps) is at \$125.77 against a best possible \$125.76. A learning rate schedule cuts the run-to-run spread of single-row SGD from \$12.16 to \$1.08.
-- **A small neural network learns the curve a line can't.** Typical miss falls from \$126 for the best straight line to \$61 for a 25-weight network, against \$60 of noise built into the data. Backpropagation is checked against a finite-difference estimate for every weight.
-- **An under-trained model gives a confident wrong budget.** The truly best spend is \$257 a day. The straight line recommends \$500 and leaves about \$110 a day behind. The network after one pass through the data recommends \$391 and leaves about \$40 a day behind. Fully trained, it recommends \$263 and gives up 10 cents.
-- **Random starts disagree a little.** Ten trainings of the same network recommend budgets from \$249 to \$263 a day.
+- **A small neural network learns the curve a line can't.** On the training days, typical miss falls from \$126 for the best straight line to \$61 for a 25-parameter network. On 1,000 fresh test days it is \$130 for the line and \$59 for the network, and the true curve itself misses by \$59. Backpropagation is checked against a finite-difference estimate for every parameter.
+- **The wrong model, or an undertrained one, gives a confident wrong budget.** The truly best spend is \$257 a day. The straight line, trained perfectly, recommends \$500 and leaves about \$110 a day behind. The network after one pass through the data recommends \$391 and leaves about \$40 a day behind. Fully trained, it recommends \$263 and gives up 10 cents.
+- **Random starting weights give slightly different models.** Ten trainings of the same network, differing only in their starting weights, recommend budgets from \$250 to \$263 a day.
 
-The budget example assumes the simulated response curve is the truth and that ad spend causes the revenue. Real campaigns need an incrementality test to establish that.
+The budget example assumes the simulated response curve is the truth and that ad spend causes the revenue. With real data that has to be established separately, and a randomized incrementality test is one strong way to do it. Passing the notebook's checks means it produced the examples it describes. It doesn't prove the same thing happens with other data.
 
 ## Related Articles
 

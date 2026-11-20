@@ -4,12 +4,12 @@ Elevation,Loss: how wrong the model is with those settings
 Contour line,Settings that are all equally wrong
 Slope of the ground,Derivative (one direction) or gradient (all directions at once)
 "Fall line, straight downhill",Negative gradient
-Length of your stride,Learning rate (step size)
+How boldly you stride for a given slope,Learning rate (step size): step = learning rate * gradient
 Running past the control,Overshooting: the learning rate is too high
 Reaching the control,Convergence: more steps no longer change the answer
 Lowest point on the map,Global minimum
 A depression you can't see out of,Local minimum
 "Saddle, or a pass between hills",Saddle point
 Flat ground,"Plateau: tiny gradients, tiny steps"
-A quick look at the ground nearby,Stochastic or mini-batch gradient descent
+"Judging the slope from a few footfalls, not a full survey",Stochastic or mini-batch gradient descent: the gradient is estimated from a sample of the data
 Speed carried from running downhill,Momentum

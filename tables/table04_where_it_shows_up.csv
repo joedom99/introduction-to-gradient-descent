@@ -1,8 +1,8 @@
-Tool,What's inside,How it's trained
-Ad platform bidding,Models that predict clicks and conversions for each ad auction,"Neural networks trained with stochastic gradient descent, updated as new data arrives"
-Product and content recommendations,Models that predict what each customer will want next,"Neural networks and matrix factorization, both trained with gradient descent"
-Lookalike and propensity audiences,Models that score how likely a person is to respond,"Logistic regression at scale, gradient boosting, or neural networks"
-Large language models (chat assistants),Models that predict the next word,Mini-batch stochastic gradient descent with Adam-style step rules
-Image and video generators,Models that learn to turn noise into pictures,"The same family of step rules, on very large networks"
-"Search, translation, and speech tools",Models that match meaning across text and audio,Neural networks trained the same way
+Tool,What's inside,How it's commonly trained
+Ad bidding and conversion prediction,Models that predict clicks and conversions,"Commonly neural networks or large logistic regressions, trained with stochastic gradient methods"
+Product and content recommendations,Models that predict what each customer will want next,"Often neural networks or matrix factorization. Gradient-based training is common, though other methods are used too"
+Lookalike and propensity audiences,Models that score how likely a person is to respond,Logistic regression or neural networks (gradient-based). Gradient boosting uses gradients in a different way
+Large language models (chat assistants),Models that predict the next token (a word or piece of one),"Mini-batches and gradient-based step rules, often AdamW"
+Image and video generators,Models that learn to turn noise into pictures,"The same family of gradient-based methods, on very large networks"
+"Search, translation, and speech tools",Models that match meaning across text and audio,Neural networks trained with the same family of methods
 Where it usually isn't used,"Ordinary linear regression, decision trees, random forests","A formula gives the answer directly, or the model is built a different way"
