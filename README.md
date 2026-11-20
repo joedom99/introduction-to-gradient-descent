@@ -54,7 +54,7 @@ The notebook is organized into sixteen sections:
 12. A small neural network
 13. From a trained model to a budget
 14. Reference tables
-15. Checking the results (31 checks: 11 math checks that should hold under any settings and 20 simulation results)
+15. Checking the results (33 checks: 13 math checks that should hold under any settings and 20 simulation results)
 16. Summary
 
 ### How to run it
