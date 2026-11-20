@@ -35,7 +35,7 @@ All data is simulated with illustrative assumptions. A fixed random seed keeps t
 |------|-------------|
 | `introduction_to_gradient_descent.ipynb` | The notebook. Runs top to bottom in Google Colab using only preinstalled libraries. |
 | `figures/` | Thirteen figures (fig01 to fig13) plus `hero_base.png`, a label-free map for a header image. 300 dpi PNG, Country Fried Creative brand style. |
-| `tables/` | Six tables as blog-ready PNG images, each with a CSV copy |
+| `tables/` | Seven tables as blog-ready PNG images, each with a CSV copy |
 | `requirements.txt` | Libraries for running locally |
 
 The notebook is organized into sixteen sections:
@@ -74,7 +74,7 @@ The notebook downloads the Lato font for its figures and falls back to the defau
 
 ## Article Figure and Table Numbers
 
-The file names follow the notebook's order. The article adds three conceptual diagrams (Figures 1, 5, and 14), so its numbering differs.
+The file names follow the order the notebook was built in. The article adds three conceptual diagrams (Figures 1, 5, and 14) and numbers tables in reading order, so its numbering differs.
 
 | Article | File |
 |---------|------|
@@ -93,11 +93,12 @@ The file names follow the notebook's order. The article adds three conceptual di
 | Figure 15 | `figures/fig12_network_learning.png` |
 | Figure 16 | `figures/fig13_budget.png` |
 | Table 1 | `tables/table01_orienteering_glossary` |
-| Table 2 | `tables/table02_feature_scaling` |
-| Table 3 | `tables/table03_budget_by_model` |
-| Table 4 | `tables/table04_where_it_shows_up` |
-| Table 5 | `tables/table05_troubleshooting` |
-| Notebook only | `tables/table06_summary` |
+| Table 2 | `tables/table07_stopping_rules` |
+| Table 3 | `tables/table02_feature_scaling` |
+| Table 4 | `tables/table03_budget_by_model` |
+| Table 5 | `tables/table04_where_it_shows_up` |
+| Table 6 | `tables/table05_troubleshooting` |
+| Table 7 | `tables/table06_summary` |
 
 ## Key Results
 

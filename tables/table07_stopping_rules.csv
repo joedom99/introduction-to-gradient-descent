@@ -1,0 +1,6 @@
+Stopping rule,Steps taken,Distance from the lowest point when it stopped
+Gradient below 1 m per km,37,143 m
+Gradient below 0.01 m per km,60,1.38 m
+Loss improved by less than 0.001 m,46,23 m
+Loss changed by less than 1e-10 m and steps under 0.01 m (the default here),86,0.01 m
+Step limit of 200 with the too-small rate (0.002),200,4.15 km
