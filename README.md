@@ -74,7 +74,7 @@ The notebook downloads the Lato font for its figures and falls back to the defau
 
 ## Article Figure and Table Numbers
 
-The file names follow the order the notebook was built in. The article adds three conceptual diagrams (Figures 1, 5, and 14) and numbers tables in reading order, so its numbering differs.
+The file names follow the order the notebook was built in. The article adds three conceptual diagrams (Figures 1, 5, and 14) and numbers tables in reading order, so its numbering differs. The summary table appears only in the notebook.
 
 | Article | File |
 |---------|------|
@@ -98,7 +98,7 @@ The file names follow the order the notebook was built in. The article adds thre
 | Table 4 | `tables/table03_budget_by_model` |
 | Table 5 | `tables/table04_where_it_shows_up` |
 | Table 6 | `tables/table05_troubleshooting` |
-| Table 7 | `tables/table06_summary` |
+| Notebook only | `tables/table06_summary` |
 
 ## Key Results
 
