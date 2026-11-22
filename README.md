@@ -8,7 +8,7 @@
 ![Data](https://img.shields.io/badge/data-simulated-6db7ac)
 [![License: MIT](https://img.shields.io/badge/License-MIT-198a53.svg)](LICENSE)
 
-Companion notebook for the Marketing Data Science article **"An Introduction to Gradient Descent: How Machines Learn by Walking Downhill"** on [blog.marketingdatascience.ai](https://blog.marketingdatascience.ai).
+Companion notebook for the Marketing Data Science article [**"An Introduction to Gradient Descent: How Machines Learn by Walking Downhill"**](https://blog.marketingdatascience.ai/an-introduction-to-gradient-descent-how-machines-learn-by-walking-downhill-0821eb4fdb1f) on [blog.marketingdatascience.ai](https://blog.marketingdatascience.ai).
 
 ![Gradient descent walking downhill on a topographic map](figures/fig04_descent_path.png)
 
